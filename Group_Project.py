@@ -1,8 +1,16 @@
 import csv
 
-with open('sales.csv', 'r') as csv_file:
-    spreadsheet = csv.DictReader(csv_file)
-    for row in spreadsheet:
-        sls_month = row['month']
+def read_data():
+    data = []
 
-print(sls_month)
+    with open('sales.csv', 'r') as csv_file:
+        spreadsheet = csv.DictReader(csv_file)
+        for row in spreadsheet:
+            sls_value = row['sales']
+            data.append(sls_value)
+
+    return data
+
+
+read_data()
+print(read_data())
