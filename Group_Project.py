@@ -1,4 +1,6 @@
 import csv
+import statistics
+
 
 def read_data():
     data = []
@@ -11,6 +13,7 @@ def read_data():
 
     return data
 
-
-read_data()
 print(read_data())
+print(max(read_data()))
+print(min(read_data()))
+print(type(read_data()))
