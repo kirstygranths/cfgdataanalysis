@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
+#######KASIA######
 def read_data():
     data = []
 
@@ -35,6 +35,8 @@ print(run())
 
 
 total = sum(run())
+
+#######ELOISE######
 max_sales = max(run())
 min_sales = min(run())
 ave_sales = round(statistics.mean(run()),2)
@@ -68,6 +70,8 @@ print(f'Highest profit:{max_profit}')
 print(f'Lowest profit:{min_profit}')
 print(f'Average profit:{ave_profit}')
 
+
+#######KIRSTY######
 #FORMATTING DF TO SHOW SLS, PROFIT, EXPENDITURE ONLY
 new_df = df.drop(['year','sales_pct_change','profit_pct_change'],1)
 print(new_df)
