@@ -19,6 +19,7 @@ def read_data():
 
 print(read_data())
 
+#CREATING LIST OF SALES
 def run():
     data = read_data()
 
@@ -38,7 +39,7 @@ max_sales = max(run())
 min_sales = min(run())
 ave_sales = round(statistics.mean(run()),2)
 
-
+#TOTAL, MIN, MAX SALES
 print(f'Total sales: {total}')
 print(f'Highest sales: {max_sales}')
 print(f'Lowest sales: {min_sales}')
@@ -55,6 +56,8 @@ df['profit'] = df['sales'] - df['expenditure']
 df['profit_pct_change'] = round(df['profit'].pct_change(),4)
 
 print(df)
+
+#TOTAL, MIN, MAX PROFIT
 total_profit = sum(df['profit'])
 max_profit = max(df['profit'])
 min_profit = min(df['profit'])
@@ -96,3 +99,4 @@ sns.relplot(
     x="month", y="value", hue="variable")
 
 plt.show()
+
